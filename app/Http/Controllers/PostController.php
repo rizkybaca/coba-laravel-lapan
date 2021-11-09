@@ -7,22 +7,22 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index()
-    {
-        return view(
-            'blog',
-            [
-                "title" => "Blog",
-                "posts" => Post::all()
-            ]
-        );
-    }
+  public function index()
+  {
+    return view(
+      'blog',
+      [
+        "title" => "Posts",
+        "posts" => Post::all()
+      ]
+    );
+  }
 
-    public function show($slug)
-    {
-        return view('post', [
-            "title" => "Single Post",
-            "post" => Post::find($slug)
-        ]);
-    }
+  public function show(Post $post)
+  {
+    return view('post', [
+      "title" => "Single Post",
+      "post" => $post
+    ]);
+  }
 }
