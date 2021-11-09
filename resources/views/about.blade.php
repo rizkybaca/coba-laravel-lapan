@@ -1,6 +1,9 @@
      @extends('layouts.main')
      @section('container')
          
-      <h1>Yoi, world!</h1>
+      <h1>About Page</h1>
+      <h3>{{ $name }}</h3>
+      <p>{{ $email }}</p>
+      <img src="image/{{ $image }}" alt="{{ $name }}" width="200" class="img-thumbnail rounded-circle">
      @endsection 
      
