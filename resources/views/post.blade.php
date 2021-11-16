@@ -5,7 +5,7 @@
   <h2>{{ $post->title }}</h2>
 
 
-  <h5>By: {{ $post['author'] }} in <a href="/categories/{{ $post->categories->slug }}">{{ $post->categories->name }}</a></h5>
+  <h5>By: {{ $post['author'] }} in </h5>
 
   {!! $post->body !!}
 </article>
