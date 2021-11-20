@@ -13,7 +13,8 @@ class PostController extends Controller
       'blog',
       [
         "title" => "Blog",
-        "posts" => Post::all()
+        // "posts" => Post::all()
+        "posts" => Post::latest()->get()
       ]
     );
   }
