@@ -12,9 +12,10 @@ class PostController extends Controller
     return view(
       'blog',
       [
-        "title" => "All Blog",
+        "title" => "Blog",
+        "active" => "blog",
         // "posts" => Post::all()
-        "posts" => Post::with(['author', 'category'])->latest()->get()
+        "posts" => Post::latest()->get()
       ]
     );
   }
@@ -23,6 +24,7 @@ class PostController extends Controller
   {
     return view('post', [
       "title" => "Single Post",
+      "active" => "blog",
       "post" => $post
     ]);
   }
