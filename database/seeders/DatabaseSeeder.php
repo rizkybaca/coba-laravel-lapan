@@ -18,11 +18,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(3)->create();
-        // User::create([
-        //     'name' => 'Rizky',
-        //     'email' => 'rizky@gmail.com',
-        //     'password' => bcrypt('12345'),
-        // ]);
+        User::create([
+            'name' => 'Rizky',
+            'username' => 'rizky',
+            'email' => 'rizky@gmail.com',
+            'password' => bcrypt('password'),
+        ]);
         // User::create([
         //     'name' => 'Alip',
         //     'email' => 'alip@gmail.com',
@@ -32,6 +33,10 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming'
+        ]);
+        Category::create([
+            'name' => 'Web Design',
+            'slug' => 'web-design'
         ]);
         Category::create([
             'name' => 'Personal',
